@@ -6,28 +6,61 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-javascript",
-  "lastModifiedDate" : "2024-08-12T15:17:31Z",
+  "lastModifiedDate" : "2024-08-12T15:33:42Z",
   "model" : {
     "people" : [ {
       "id" : "1",
       "location" : "Unspecified",
-      "name" : "User",
+      "name" : "POS Operator",
       "properties" : {
-        "structurizr.dsl.identifier" : "user"
+        "structurizr.dsl.identifier" : "posoperator"
       },
       "relationships" : [ {
         "description" : "Uses",
-        "destinationId" : "2",
-        "id" : "3",
+        "destinationId" : "3",
+        "id" : "5",
         "properties" : {
-          "structurizr.dsl.identifier" : "fb314551-e99a-407b-84b1-ab572beea6c3"
+          "structurizr.dsl.identifier" : "26fb4879-42af-45bf-8e5c-7453d7424d38"
         },
         "sourceId" : "1",
         "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "2",
+        "id" : "6",
+        "linkedRelationshipId" : "5",
+        "sourceId" : "1"
       } ],
       "tags" : "Element,Person"
     } ],
     "softwareSystems" : [ {
+      "containers" : [ {
+        "documentation" : { },
+        "id" : "3",
+        "name" : "Web Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "wa"
+        },
+        "relationships" : [ {
+          "description" : "Reads from",
+          "destinationId" : "4",
+          "id" : "7",
+          "properties" : {
+            "structurizr.dsl.identifier" : "92b062aa-8438-4ff6-92a9-18263afcf3f7"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "documentation" : { },
+        "id" : "4",
+        "name" : "Database Schema",
+        "properties" : {
+          "structurizr.dsl.identifier" : "db"
+        },
+        "tags" : "Element,Container,Database"
+      } ],
       "documentation" : { },
       "id" : "2",
       "location" : "Unspecified",
@@ -40,20 +73,80 @@
   },
   "name" : "Name",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgdXNlciA9IHBlcnNvbiAiVXNlciIKICAgICAgICBzb2Z0d2FyZVN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJTb2Z0d2FyZSBTeXN0ZW0iCgogICAgICAgIHVzZXIgLT4gc29mdHdhcmVTeXN0ZW0gIlVzZXMiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgc29mdHdhcmVTeXN0ZW0gIkRpYWdyYW0xIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KICAgIH0KCiAgICBjb25maWd1cmF0aW9uIHsKICAgICAgICBzY29wZSBzb2Z0d2FyZXN5c3RlbQogICAgfQoKfQo="
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgcG9zT3BlcmF0b3IgPSBwZXJzb24gIlBPUyBPcGVyYXRvciIKICAgICAgICBzb2Z0d2FyZVN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgd2EgPSBjb250YWluZXIgIldlYiBBcHBsaWNhdGlvbiIKICAgICAgICAgICAgZGIgPSBjb250YWluZXIgIkRhdGFiYXNlIFNjaGVtYSIgewogICAgICAgICAgICAgICAgdGFncyAiRGF0YWJhc2UiCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgICMgcG9zT3BlcmF0b3IgLT4gc29mdHdhcmVTeXN0ZW0gIlVzZXMiCiAgICAgICAgcG9zT3BlcmF0b3IgLT4gd2EgIlVzZXMiCiAgICAgICAgd2EgLT4gZGIgIlJlYWRzIGZyb20iCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgc29mdHdhcmVTeXN0ZW0gIkRpYWdyYW0xIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgc29mdHdhcmVTeXN0ZW0gIkRpYWdybWE5OSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiRWxlbWVudCIgewogICAgICAgICAgICAgICAgY29sb3Igd2hpdGUKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJTb2Z0d2FyZSBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzJEODgyRAogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlBlcnNvbiIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMTE2NjExCiAgICAgICAgICAgICAgICBzaGFwZSBwZXJzb24KICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzU1QUE1NQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIGNvbmZpZ3VyYXRpb24gewogICAgICAgIHNjb3BlIHNvZnR3YXJlc3lzdGVtCiAgICB9Cgp9Cg=="
   },
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "Diagram1",
+      "lastSavedView" : "Diagrma99",
       "metadataSymbols" : "SquareBrackets",
-      "styles" : { },
+      "styles" : {
+        "elements" : [ {
+          "color" : "#ffffff",
+          "tag" : "Element"
+        }, {
+          "background" : "#2d882d",
+          "tag" : "Software System"
+        }, {
+          "background" : "#116611",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#55aa55",
+          "tag" : "Container"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
       "terminology" : { }
     },
-    "systemContextViews" : [ {
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
       "dimensions" : {
-        "height" : 1748,
-        "width" : 2480
+        "height" : 841,
+        "width" : 2320
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 200
+      }, {
+        "id" : "3",
+        "x" : 899,
+        "y" : 250
+      }, {
+        "id" : "4",
+        "x" : 1649,
+        "y" : 250
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Diagrma99",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "5"
+      }, {
+        "id" : "7"
+      } ],
+      "softwareSystemId" : "2"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
       },
       "elements" : [ {
         "id" : "1",
@@ -61,15 +154,14 @@
         "y" : 0
       }, {
         "id" : "2",
-        "x" : 1015,
-        "y" : 724
+        "x" : 0,
+        "y" : 0
       } ],
       "enterpriseBoundaryVisible" : true,
       "key" : "Diagram1",
       "order" : 1,
-      "paperSize" : "A5_Landscape",
       "relationships" : [ {
-        "id" : "3"
+        "id" : "6"
       } ],
       "softwareSystemId" : "2"
     } ]
